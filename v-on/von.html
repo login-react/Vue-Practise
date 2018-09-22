@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>您最喜欢的电脑是{{compName}}</p>
+        <button @click="btnClick('我是一个上进的人')">我喜欢的电脑</button>
+    </div>
+</body>
+<script>
+    const myapp = new Vue({
+        el: '#app',
+        data: {
+            compName: '外星人'
+        },
+        methods: {
+            btnClick: function (pname) {
+                this.compName = pname
+            }
+        }
+    });
+</script>
+
+</html>
