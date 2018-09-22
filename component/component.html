@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div v-if="seen">
+            <ol>
+                <li v-for="game in games">
+                    {{game.title}}
+                </li>
+            </ol>
+        </div>
+    </div>
+</body>
+<script>
+    const myapp = new Vue({
+        el: '#app',
+        data: {
+            seen: true,
+            games: [
+                { title: '勇士半恶泰龙', price: 400 },
+                { title: '天开向上', price: 500 }
+            ]
+        }
+    });
+</script>
+
+</html>
