@@ -9,16 +9,16 @@
 
 <body>
     <div id="app">
-        <div v-if="seen">
-            <ol>
-                <li v-for="game in games">
-                    {{game.title}}
-                </li>
-            </ol>
-        </div>
+        <ol>
+            <game-item v-for="item in games" v-bind:game="item"></game-item>
+        </ol>
     </div>
 </body>
 <script>
+    Vue.component('game-item', {
+        props: ['game'],
+        template: '<li>{{game.title}}</li>'
+    });
     const myapp = new Vue({
         el: '#app',
         data: {
