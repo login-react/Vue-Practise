@@ -9,13 +9,8 @@
 
 <body>
     <div id="app">
-        <div v-if="seen">
-            <ol>
-                <li v-for="game in games">
-                    {{game.title}}
-                </li>
-            </ol>
-        </div>
+        <input v-model="message" />
+        <p>{{message}}</p>
     </div>
 </body>
 <script>
@@ -23,10 +18,7 @@
         el: '#app',
         data: {
             seen: true,
-            games: [
-                { title: '勇士半恶泰龙', price: 400 },
-                { title: '天开向上', price: 500 }
-            ]
+            message:'测试'
         }
     });
 </script>
