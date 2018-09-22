@@ -1,5 +1,5 @@
 
-<!--class取一个，返回一个字符串-->
+<!--class取一个，返回一个字符串,用顾三目运算符-->
 <template>
     <div>
         <div v-bind:class="isRead ? 'red': 'green'">123</div>

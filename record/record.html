@@ -1,8 +1,42 @@
-<html>
+<html xmlns:>
     <head>
         <title>df</title>
     </head>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <body>
-        <div>123</div>
+
+    <!--v-on:click="text"-->
+    <!--@click="text"-->
+    <!--methods:{-->
+    <!--}-->
+
+    <!--export default 这个对象的根属性加上data属性，其是一个函数-->
+    <!--在templete中使用变量或者函数，是不可以this-->
+    <!--script中是要用this-->
+
+        <div id="app">
+            <ol>
+                <li v-for="item in games">{{item.name}}/{{item.price}}</li>
+            </ol>
+            <button v-on:click="text()">点击</button>
+        </div>
     </body>
+    <script>
+        const newVue = new Vue({
+            el: '#app',
+            data:{
+                games:[
+                    {name: 'mfkdwiun', price: 12},
+                    {name: 'ggfhmq', price: 12}
+                ]
+            },methods: {
+                text:function () {
+                    // 在methods里面要用this
+                    this.games.push({
+                        name: 'zt', price: 12
+                    })
+                }
+            }
+        });
+    </script>
 </html>
