@@ -7,11 +7,13 @@
 </head>
 <body>
 <div id="app">
+  <div v-if="seen">
     <ol>
         <li v-for="game in games">
             {{game.title}}
         </li>
     </ol>
+  </div>
 </div>
 </body>
 <script>
@@ -20,7 +22,8 @@
        data: {
            seen: true,
            games: [
-               {title: '勇士半恶泰龙',price:400}
+               {title: '勇士半恶泰龙',price:400},
+               {title: '天开向上',price:500}
            ]
        }
     });
