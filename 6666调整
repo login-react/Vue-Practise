@@ -1,0 +1,1 @@
+Math.max.apply(null,[3,4,9])  --->> 9
