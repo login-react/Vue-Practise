@@ -90,3 +90,13 @@ function two() {
 let promise = Promise.all([one(), two()]).then(value =>
   console.log("value", value)
 );
+
+过滤
+const arr = [1, 2, 1, 2, 3, 5, 4, 5, 3, 4, 4, 4, 4];
+    // var arr = [1, 2, 1, 2, 3, 5, 4, 5, 3, 4, 4, 4, 4];
+    const str = arr.sort().reduce((prev, cur) => {
+      if (prev.length === 0 || prev[prev.length - 1] !== cur) {
+        prev.push(cur);
+      }
+      return prev;
+    }, []);
